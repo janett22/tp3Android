@@ -4,7 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="#8BC34A"
+    app:cardBackgroundColor="@color/purple_200"
     app:cardCornerRadius="20dp"
     app:cardElevation="10dp"
     app:contentPadding="20dp"
@@ -40,8 +40,10 @@
 
         <TextView
             android:id="@+id/tvDescripcion"
-            android:layout_width="43dp"
-            android:layout_height="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textAlignment="center"
             app:layout_constraintTop_toBottomOf="@+id/ivFoto"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.312"
@@ -51,9 +53,16 @@
             android:id="@+id/btCambiar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="Detalle"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/boton"
+            android:text="Detalles"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvDescripcion"
             tools:ignore="MissingConstraints" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.cardview.widget.CardView>

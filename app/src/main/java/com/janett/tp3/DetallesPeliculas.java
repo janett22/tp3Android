@@ -4,10 +4,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.TaskStackBuilder;
-import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.janett.tp3.modelo.pelicula;
 
@@ -25,8 +22,19 @@ public class DetallesPeliculas extends AppCompatActivity {
         setContentView(R.layout.detalles_peliculas);
         inicializarVista();
 
-        detpelis= (pelicula) getIntent().getExtras().getSerializable("Detalles pelicula");
+        detpelis= (pelicula) getIntent().getExtras().getSerializable("DetallesPeliculas");
         foto.setImageResource(detpelis.getFoto());
+
+        inicializarValores();
+
+
+    }
+
+    private void inicializarValores() {
+        titulo.setText(detpelis.getTitulo());
+        director.setText("\nDirector: " + detpelis.getDirector());
+        autor.setText("\nAutores: " + detpelis.getAutor());
+        descripcion.setText("\n " + detpelis.getDescripcion());
 
 
 
@@ -38,5 +46,9 @@ public class DetallesPeliculas extends AppCompatActivity {
         autor = findViewById(R.id.tvDetalleAutores);
         director = findViewById(R.id.tvDetalleDirector);
         foto= findViewById(R.id.ivDetalleFoto);
+
+
     }
+
+
 }

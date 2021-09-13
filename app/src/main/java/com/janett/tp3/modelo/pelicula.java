@@ -1,6 +1,8 @@
 package com.janett.tp3.modelo;
 
-public class pelicula {
+import java.io.Serializable;
+
+public class pelicula implements Serializable {
 
     private String titulo;
     private int foto;

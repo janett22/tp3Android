@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Janett/AndroidStudioProjects/tp3/app/src/main/res/drawable/backgroud.xml" value="0.1265625" />
+        <entry key="..\:/Users/Janett/AndroidStudioProjects/tp3/app/src/main/res/drawable/boton.xml" value="0.1265625" />
+        <entry key="..\:/Users/Janett/AndroidStudioProjects/tp3/app/src/main/res/drawable/esquinas_boton.xml" value="0.1265625" />
         <entry key="..\:/Users/Janett/AndroidStudioProjects/tp3/app/src/main/res/layout/activity_main.xml" value="0.1094224924012158" />
-        <entry key="..\:/Users/Janett/AndroidStudioProjects/tp3/app/src/main/res/layout/detalles_peliculas.xml" value="0.10260416666666666" />
-        <entry key="..\:/Users/Janett/AndroidStudioProjects/tp3/app/src/main/res/layout/item_peliculas.xml" value="0.17692307692307693" />
+        <entry key="..\:/Users/Janett/AndroidStudioProjects/tp3/app/src/main/res/layout/detalles_peliculas.xml" value="0.22" />
+        <entry key="..\:/Users/Janett/AndroidStudioProjects/tp3/app/src/main/res/layout/item_peliculas.xml" value="0.15" />
         <entry key="..\:/Users/Janett/AndroidStudioProjects/tp3/app/src/main/res/layout/item_peliculas2.xml" value="0.1213768115942029" />
       </map>
     </option>

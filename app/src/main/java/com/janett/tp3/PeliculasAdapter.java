@@ -2,7 +2,6 @@ package com.janett.tp3;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.janett.tp3.modelo.pelicula;
 
+
 import java.util.ArrayList;
 
 public class PeliculasAdapter extends RecyclerView.Adapter<PeliculasAdapter.ViewHolder>{
@@ -22,10 +22,12 @@ public class PeliculasAdapter extends RecyclerView.Adapter<PeliculasAdapter.View
     private Context context;
     private LayoutInflater layoutInflater;
 
+
     public PeliculasAdapter(ArrayList<pelicula> peliculas, Context context, LayoutInflater layoutInflater) {
         this.peliculas = peliculas;
         this.context = context;
         this.layoutInflater = layoutInflater;
+
     }
 
     @NonNull
@@ -38,22 +40,21 @@ public class PeliculasAdapter extends RecyclerView.Adapter<PeliculasAdapter.View
 
        @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+           final pelicula itemPeliculas = peliculas.get(position);
            holder.tvTitulo.setText(peliculas.get(position).getTitulo());
            holder.tvDescripcion.setText(peliculas.get(position).getDescripcion());
            holder.ivFoto.setImageResource(peliculas.get(position).getFoto());
 
-          final pelicula itemsPelicula = peliculas.get(position);
-          holder.btCambiar.setOnClickListener(new View.OnClickListener()
-          {
-
+          holder.btCambiar.setOnClickListener(new View.OnClickListener() {
               @Override
               public void onClick(View v) {
                   Intent intent = new Intent(holder.btCambiar.getContext(), DetallesPeliculas.class);
-                  intent.putExtra("Detalles pelicula", (Parcelable) itemsPelicula);
+                  intent.putExtra("DetallesPeliculas", itemPeliculas);
                   holder.btCambiar.getContext().startActivity(intent);
+
+
               }
           });
-
 
     }
 
@@ -62,6 +63,8 @@ public class PeliculasAdapter extends RecyclerView.Adapter<PeliculasAdapter.View
     public int getItemCount() {
         return peliculas.size();
     }
+
+
 
 
     public class ViewHolder extends RecyclerView.ViewHolder{
